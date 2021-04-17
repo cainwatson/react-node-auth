@@ -11,12 +11,16 @@ export default function NavBar() {
         <li>
           <Link to="/">Home</Link>
         </li>
-        <li>
-          <Link to="/signup">Sign Up</Link>
-        </li>
-        <li>
-          <Link to="/signin">Sign In</Link>
-        </li>
+        {!isAuthenticated && (
+          <>
+            <li>
+              <Link to="/signup">Sign Up</Link>
+            </li>
+            <li>
+              <Link to="/signin">Sign In</Link>
+            </li>
+          </>
+        )}
         <li>
           <Link to="/dashboard">Dashboard</Link>
         </li>

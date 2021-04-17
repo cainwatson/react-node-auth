@@ -11,8 +11,7 @@ export default function SignIn() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      const redirectTo = location.state?.from ?? '/dashboard';
-      history.replace(redirectTo);
+      history.replace(location.state?.from ?? '/dashboard');
     }
   }, [history, location, isAuthenticated]);
 
