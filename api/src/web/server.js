@@ -1,5 +1,6 @@
 import fastify from 'fastify';
 import config from './config.js';
+import addRoutes from './routes.js';
 
 const server = fastify({
   logger: {
@@ -7,8 +8,6 @@ const server = fastify({
   },
 });
 
-server.get('/ping', async (request, reply) => {
-  return 'pong';
-});
+addRoutes(server);
 
 export default server;
