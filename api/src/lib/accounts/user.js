@@ -20,6 +20,11 @@ const User = {
 
     return savedUser;
   },
+  toJson(user) {
+    const { password: _, ...json } = user;
+
+    return json;
+  },
 };
 
 export default User;

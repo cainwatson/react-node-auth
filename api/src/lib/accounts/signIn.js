@@ -15,5 +15,5 @@ export default async function signIn(payload) {
     throw new errors.InvalidCredentialsException();
   }
 
-  return userWithUsername;
+  return User.toJson(userWithUsername);
 }

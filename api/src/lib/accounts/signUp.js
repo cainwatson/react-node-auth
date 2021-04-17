@@ -7,5 +7,5 @@ export default async function signUp(payload) {
     password,
   });
 
-  return user;
+  return User.toJson(user);
 }
