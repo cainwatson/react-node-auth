@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
+import { useAuth } from '../hooks/useAuth';
+import SignOutButton from './SignOutButton';
 
 export default function NavBar() {
+  const { isAuthenticated } = useAuth();
+
   return (
     <nav>
       <ul>
@@ -16,9 +20,11 @@ export default function NavBar() {
         <li>
           <Link to="/dashboard">Dashboard</Link>
         </li>
-        <li>
-          <Link to="/dashboard">Dashboard</Link>
-        </li>
+        {isAuthenticated && (
+          <li>
+            <SignOutButton />
+          </li>
+        )}
       </ul>
     </nav>
   );
