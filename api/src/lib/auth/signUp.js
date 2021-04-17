@@ -1,1 +1,3 @@
-export default function signUp() {}
+export default function signUp() {
+  return 'this is sign up - from lib';
+}
