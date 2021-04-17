@@ -16,6 +16,10 @@ export async function login(username, password) {
     if (error.response?.status === 401) {
       error.message =
         'We could not find any user with that username and password';
+    } else {
+      console.error(error);
+      error.message =
+        'Sorry! Something unexpected happened on our side, try again in a moment.';
     }
     throw error;
   }
