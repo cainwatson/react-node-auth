@@ -1,7 +1,7 @@
-import addPingRoutes from './routes/ping.js';
-import addAuthRoutes from './routes/auth.js';
+import registerPingRoutes from './routes/ping.js';
+import registerAuthRoutes from './routes/auth.js';
 
-export default function addRoutes(server) {
-  addPingRoutes(server);
-  addAuthRoutes(server);
+export default function registerRoutes(server) {
+  registerPingRoutes(server);
+  registerAuthRoutes(server);
 }

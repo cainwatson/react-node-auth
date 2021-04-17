@@ -9,7 +9,8 @@
     "dev": "npx nodemon --exec \"npx yarn start\""
   },
   "dependencies": {
-    "fastify": "^3.14.2"
+    "fastify": "^3.14.2",
+    "fastify-cors": "^5.2.0"
   },
   "devDependencies": {
     "pino-pretty": "^4.7.1"

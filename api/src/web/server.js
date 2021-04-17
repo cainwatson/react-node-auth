@@ -1,6 +1,7 @@
 import fastify from 'fastify';
 import config from './config.js';
-import addRoutes from './routes.js';
+import registerMiddleware from './middleware.js';
+import registerRoutes from './routes.js';
 
 const server = fastify({
   logger: {
@@ -8,6 +9,7 @@ const server = fastify({
   },
 });
 
-addRoutes(server);
+registerMiddleware(server);
+registerRoutes(server);
 
 export default server;

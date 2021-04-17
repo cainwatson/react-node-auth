@@ -3,7 +3,7 @@ import accounts from '../../lib/accounts.js';
 /**
  * @param {import('fastify').FastifyInstance} server
  */
-export default function addAuthRoutes(server) {
+export default function registerAuthRoutes(server) {
   server.post('/auth/signup', async (request, reply) => {
     const { username, password } = request.body;
     const user = await accounts.signUp({ username, password });
