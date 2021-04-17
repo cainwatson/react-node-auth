@@ -3,7 +3,7 @@ import { useHistory, useLocation } from 'react-router';
 import { useAuth } from '../hooks/useAuth';
 
 export default function SignIn() {
-  const { isAuthenticated, login } = useAuth();
+  const { isAuthenticated, error, login } = useAuth();
   const history = useHistory();
   const location = useLocation();
   const [username, setUsername] = useState('');
@@ -38,6 +38,7 @@ export default function SignIn() {
         />
       </div>
       <button onClick={handleLogin}>Sign In</button>
+      {error && <p>{error.message}</p>}
     </section>
   );
 }

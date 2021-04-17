@@ -51,20 +51,9 @@ export function AuthProvider({ children }) {
     }
   }, []);
 
-  const displayForStatus = () => {
-    if (state.status === AuthStatus.PENDING) {
-      return 'Loading...';
-    } else if (state.status === AuthStatus.ERROR) {
-      console.error(state.error);
-      return 'Sorry. An error happened.';
-    } else {
-      return children;
-    }
-  };
-
   return (
     <AuthContext.Provider value={context}>
-      {displayForStatus()}
+      {state.status === AuthStatus.PENDING ? 'Loading...' : children}
     </AuthContext.Provider>
   );
 }
