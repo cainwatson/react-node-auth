@@ -8,6 +8,15 @@ export default function NavBar() {
           <Link to="/">Home</Link>
         </li>
         <li>
+          <Link to="/signup">Sign Up</Link>
+        </li>
+        <li>
+          <Link to="/signin">Sign In</Link>
+        </li>
+        <li>
+          <Link to="/dashboard">Dashboard</Link>
+        </li>
+        <li>
           <Link to="/dashboard">Dashboard</Link>
         </li>
       </ul>
