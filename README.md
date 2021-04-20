@@ -5,7 +5,7 @@ context and hooks API to build out authentication.
 
 ## What's here
 
-* `src/` - The React client
+* `src/` - The React client.
 * `api/` - A Node API server used to make fake signin/signup requests to. Now
   that I think about it, I could have mocked this out on the frontend instead of
   building a whole server to do this...whatever 🤷‍♀️.
@@ -19,7 +19,7 @@ To start the React client you'll need to do the following in the project root:
 
 To start the Node server you'll need to do the following in the **api/
 directory**:
-* Run `yarn` to install the backend dependencies
+* Run `yarn` to install the backend dependencies.
 * Run `yarn start` to boot the node server up. This should print a url to the
   running API (http://127.0.0.1:4000).
 
@@ -48,11 +48,11 @@ To start, the root component of the application is called App (very original)
 and is located at `src/App.jsx`.
 
 App renders our `AuthProvider`--we'll get to that in a moment--and uses some
-components from React Router to do routing based. The routes themselves are
-abstracted to another component `<Routes />` in `src/Routes.jsx`. Routes sets up
-4 screens: Home, SignIn, SignUp, and Dashboard. All of these except Dashboard
-are 'public', meaning they should be accessible to any user of the app,
-regardless if they've registered and signed in or not.
+components from React Router to do routing. The routes themselves are abstracted
+to another component `<Routes />` in `src/Routes.jsx`. Routes sets up 4 screens:
+Home, SignIn, SignUp, and Dashboard. All of these except Dashboard are 'public',
+meaning they should be accessible to any user of the app, regardless if they've
+registered and signed in or not.
 
 To ensure only logged in users can navigate to the `/dashboard` screen, a helper
 `<PrivateRoute />` component has been created at
