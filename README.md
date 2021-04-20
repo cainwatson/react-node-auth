@@ -109,3 +109,8 @@ In the `<SignIn />`, `<SignOutButton />`, and `<NavBar />` components we can see
 how the `useAuth` hook is used to access the data from the context to login,
 logout, redirect to the dashboard when authenticated, and display certain links
 if authenticated or not.
+
+## Related Resources
+
+* https://kentcdodds.com/blog/authentication-in-react-applications
+* https://dennyscott.io/react-hooks-authentication/
