@@ -3,6 +3,6 @@
  */
 export default function registerPingRoutes(server) {
   server.get('/ping', async (request, reply) => {
-    return 'pong';
+    return 'pong!';
   });
 }
