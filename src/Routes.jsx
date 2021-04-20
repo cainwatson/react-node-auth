@@ -1,9 +1,9 @@
 import { Route } from 'react-router';
-import PrivateRoute from './PrivateRoute';
-import Home from '../screens/Home';
-import SignUp from '../screens/SignUp';
-import SignIn from '../screens/SignIn';
-import Dashboard from '../screens/Dashboard';
+import PrivateRoute from './components/PrivateRoute';
+import Home from './screens/Home';
+import SignUp from './screens/SignUp';
+import SignIn from './screens/SignIn';
+import Dashboard from './screens/Dashboard';
 
 export default function Routes() {
   return (
